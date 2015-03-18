@@ -15,7 +15,7 @@ if (Meteor.isClient) {
       }
       if (post.content) {
         Posts.insert(post);
-        content.val('');
+        $content.val('');
       } else {
         alert('your post must not be empty...');
       }
