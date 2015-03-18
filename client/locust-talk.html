@@ -20,11 +20,25 @@
 
   <div class="container">
     <h1>Feed</h1>
-    {{> hello}}
+    {{> feed}}
   </div>
 </body>
 
-<template name="hello">
-  <button class="btn btn-default">Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="feed">
+  <div class="posts">
+    {{#each posts}}
+      {{> post}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="post">
+  <div class="post">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        {{content}}
+      </div>
+      <div class="panel-footer">{{author}}</div>
+    </div>
+  </div>
 </template>
