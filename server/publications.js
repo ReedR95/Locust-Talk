@@ -1,3 +1,7 @@
 Meteor.publish('posts', function(options) {
-  return Posts.find();
+  check(options, {
+    sort: Object,
+    limit: Number
+  });
+  return Posts.find({}, options);
 });
