@@ -1,5 +1,5 @@
-if (!Session.get('identity')) {
-  Session.set('identity', Date.now());
+if (!Cookie.get('identity')) {
+  Cookie.set('identity', Date.now());
 }
 
 Template.compose.events({
@@ -8,7 +8,7 @@ Template.compose.events({
     
     post = {
       date_created: Date.now(),
-      author: Session.get('identity'),
+      author: Cookie.get('identity'),
       content: $content.val()
     }
     if (post.content) {
@@ -22,6 +22,6 @@ Template.compose.events({
 
 Template.compose.helpers({
   identity: function() {
-    return Session.get('identity');
+    return Cookie.get('identity');
   }
 });
