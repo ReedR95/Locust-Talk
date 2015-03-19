@@ -1,4 +1,4 @@
-if (Meteor.isClient) {
+//if (Meteor.isClient) {
   
   if (!Session.get('identity')) {
     Session.set('identity', Date.now());
@@ -27,4 +27,4 @@ if (Meteor.isClient) {
       return Session.get('identity');
     }
   });
-}
+//}
