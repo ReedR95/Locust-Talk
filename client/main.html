@@ -21,33 +21,3 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$\ \$$$$$$  |$$$$$$$  |  \$$$$  |         $$ |\$$$$$$$
     {{> feed}}
   </div>
 </body>
-
-<template name="compose">
-  <div class="compose">
-    <div class="form-group">
-      <textarea class="form-control" rows="3"></textarea>
-    </div>
-    <button class="btn btn-default">Post as {{identity}}</button>
-  </div>
-</template>
-
-<template name="feed">
-  <div class="posts">
-    {{#each posts}}
-      {{> post}}
-    {{else}}
-      <p>No Posts :(</p>
-    {{/each}}
-  </div>
-</template>
-
-<template name="post">
-  <div class="post">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        {{content}}
-      </div>
-      <div class="panel-footer"><i>posted by:</i> {{author}}</div>
-    </div>
-  </div>
-</template>

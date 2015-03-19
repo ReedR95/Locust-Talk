@@ -1,0 +1,9 @@
+<template name="feed">
+  <div class="posts">
+    {{#each posts}}
+      {{> post}}
+    {{else}}
+      <p>No Posts :(</p>
+    {{/each}}
+  </div>
+</template>
