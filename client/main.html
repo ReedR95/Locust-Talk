@@ -3,23 +3,20 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-static-top">
+  <pre class="title">
     <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Locust Talk</a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+$$\                                                $$\           $$$$$$$$\        $$\ $$\       
+$$ |                                               $$ |          \__$$  __|       $$ |$$ |      
+$$ |      $$$$$$\   $$$$$$$\ $$\   $$\  $$$$$$$\ $$$$$$\            $$ | $$$$$$\  $$ |$$ |  $$\ 
+$$ |     $$  __$$\ $$  _____|$$ |  $$ |$$  _____|\_$$  _|           $$ | \____$$\ $$ |$$ | $$  |
+$$ |     $$ /  $$ |$$ /      $$ |  $$ |\$$$$$$\    $$ |             $$ | $$$$$$$ |$$ |$$$$$$  / 
+$$ |     $$ |  $$ |$$ |      $$ |  $$ | \____$$\   $$ |$$\          $$ |$$  __$$ |$$ |$$  _$$&lt;  
+$$$$$$$$\\$$$$$$  |\$$$$$$$\ \$$$$$$  |$$$$$$$  |  \$$$$  |         $$ |\$$$$$$$ |$$ |$$ | \$$\ 
+\________|\______/  \_______| \______/ \_______/    \____/          \__| \_______|\__|\__|  \__|
     </div>
-  </nav>
+  </pre>
 
   <div class="container">
-    <h1>Feed</h1>
     {{> compose}}
     {{> feed}}
   </div>
@@ -30,7 +27,7 @@
     <div class="form-group">
       <textarea class="form-control" rows="3"></textarea>
     </div>
-    <button class="btn btn-primary">Post as {{identity}}</button>
+    <button class="btn btn-default">Post as {{identity}}</button>
   </div>
 </template>
 
