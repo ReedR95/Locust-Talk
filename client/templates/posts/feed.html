@@ -3,8 +3,6 @@
   <div class="posts">
     {{#each posts}}
       {{> post}}
-    {{else}}
-      <p>No Posts :(</p>
     {{/each}}
     {{#if nextPath}}
       <a class="load-more" href="{{nextPath}}">Load more</a>
