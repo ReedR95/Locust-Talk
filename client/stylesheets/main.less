@@ -1,19 +1,14 @@
 
 // General
-
-@beige: #F8F4EB;
-@dark-beige: #E9E6DE;
-
 @grey: #5F5F5F;
-@light-grey: lighten(@grey, 10%);
+@med-grey: lighten(@grey, 10%);
+@light-grey: #F4F4F4;
 
 @med-blue: #618EA9;
+@light-blue: #B4D3E5;
 
 @orange: #F3622A;
 
-body{
-	background-color: @beige;
-}
 
 // Header
 
@@ -21,7 +16,7 @@ body{
   width: 100%;
   padding: 20px 40px;
 
-  h1{
+  h1 {
     color: @grey;
     font-family: "Lato";
     font-weight: 300;
@@ -31,7 +26,7 @@ body{
     margin: 0px;
   }
 
-  h2{
+  h2 {
     color: @med-blue;
     font-family: "Arvo";
 
@@ -44,7 +39,7 @@ body{
 
 // Compose
 
-.post-time{
+.post-time {
   margin: 5px 0px;
   padding: 0px;
 
@@ -54,30 +49,29 @@ body{
   font-size: 0.75em;
 }
 
-.post{
-  margin-bottom: 40px;
+.post {
+  margin-bottom: 20px;
   display: inline-block;
-  border-top: 4px solid @orange;
+  border-top: 2px solid @med-blue;
   width: 100%;
   font-family: "Arvo";
   
-  .post-content{
-	  background-color: @dark-beige;
+  .post-content {
+	  background-color: @light-grey;
 		padding: 20px;
     margin: 0px;
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 2em;
     color: @grey;
-	  
   }
   
-  .post-footer{
+  .post-footer {
 	  float: right;
 
-    font-size: 1em;
+    font-size: .8em;
 
     padding: 10px;
-    color: @light-grey;
+    color: @med-grey;
   }
   
 }
@@ -86,14 +80,11 @@ body{
 .compose {
   margin-bottom: 40px;
   display: inline-block;
-  border-top: 4px solid @orange;
+  // border-top: 4px solid @orange;
   width: 100%;
   font-family: "Arvo";
 
-  textarea{
-    background-color: @dark-beige;
-    border: none;
-
+  textarea {
     padding: 20px;
     margin: 0px;
 
@@ -106,43 +97,34 @@ body{
     border-radius: 0px;
     box-shadow: none;
     max-width: 100%;
-
   }
 
-  textarea:focus{
+  textarea:focus {
     outline:none;
     box-shadow: none;
-
   }
 
-  .form-group{
+  .form-group {
     margin: 0px;
   }
 
-  button{
+  button {
+    background-color: #C0C0C0;
+    color: white;
 
-    background-color: @orange;
-    color: @beige;
-
-    margin: 0px;
+    margin: 10px 0;
     padding: 10px 20px;
 
     display: inline-block;
 
-    float: right;
-
-
     border-radius: 0px;
     border: none;
-
-
   }
 
   button:hover{
-    background-color: @dark-beige;
+    background-color: black;
+    color: white;
     box-shadow: none;
-
-
   }
 }
 
