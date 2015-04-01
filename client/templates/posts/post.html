@@ -1,10 +1,11 @@
 <template name="post">
+	<div class="post-time">10:23 PM Yesterday</div>
   <div class="post">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        {{content}}
-      </div>
-      <div class="panel-footer"><i>posted by:</i> {{author}}</div>
-    </div>
+	  <div class="post-content">
+      {{content}}
+		</div>
+    <div class="post-footer">
+	     <i>posted by:</i> {{author}}
+	  </div>
   </div>
 </template>

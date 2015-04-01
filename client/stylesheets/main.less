@@ -1,27 +1,150 @@
-.compose {
-  margin-top: 30px;
-  margin-bottom: 30px;
+
+// General
+
+@beige: #F8F4EB;
+@dark-beige: #E9E6DE;
+
+@grey: #5F5F5F;
+@light-grey: lighten(@grey, 10%);
+
+@med-blue: #618EA9;
+
+@orange: #F3622A;
+
+body{
+	background-color: @beige;
 }
 
-.nav_title {
-  padding: 0;
-  height: 80px;
-  border: none;
-  border-bottom: 1px dashed #4E05FF;
-  background-color: #E6FFF6;
-  overflow: hidden;
-  
-  .title {
-    display: inline-block;
-    font-size: 5px;
-    border: none;
-    background: none;
-    color: #4E05FF;
+// Header
+
+.header{
+  width: 100%;
+  padding: 20px 40px;
+
+  h1{
+    color: @grey;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 3.5em;
+
+    padding: 0px;
+    margin: 0px;
+  }
+
+  h2{
+    color: @med-blue;
+    font-family: "Arvo";
+
+    font-size: 1.25em;
+
+    padding: 5px;
+    margin: 0px;
   }
 }
 
-#logo_link {
-  text-decoration: none;
+// Compose
+
+.post-time{
+  margin: 5px 0px;
+  padding: 0px;
+
+  color: @grey;
+
+  font-family: "Arvo";
+  font-size: 0.75em;
 }
+
+.post{
+  margin-bottom: 40px;
+  display: inline-block;
+  border-top: 4px solid @orange;
+  width: 100%;
+  font-family: "Arvo";
+  
+  .post-content{
+	  background-color: @dark-beige;
+		padding: 20px;
+    margin: 0px;
+    font-size: 1.25em;
+    line-height: 2em;
+    color: @grey;
+	  
+  }
+  
+  .post-footer{
+	  float: right;
+
+    font-size: 1em;
+
+    padding: 10px;
+    color: @light-grey;
+  }
+  
+}
+
+
+.compose {
+  margin-bottom: 40px;
+  display: inline-block;
+  border-top: 4px solid @orange;
+  width: 100%;
+  font-family: "Arvo";
+
+  textarea{
+    background-color: @dark-beige;
+    border: none;
+
+    padding: 20px;
+    margin: 0px;
+
+    font-size: 1.25em;
+
+    line-height: 2em;
+
+    color: @grey;
+
+    border-radius: 0px;
+    box-shadow: none;
+    max-width: 100%;
+
+  }
+
+  textarea:focus{
+    outline:none;
+    box-shadow: none;
+
+  }
+
+  .form-group{
+    margin: 0px;
+  }
+
+  button{
+
+    background-color: @orange;
+    color: @beige;
+
+    margin: 0px;
+    padding: 10px 20px;
+
+    display: inline-block;
+
+    float: right;
+
+
+    border-radius: 0px;
+    border: none;
+
+
+  }
+
+  button:hover{
+    background-color: @dark-beige;
+    box-shadow: none;
+
+
+  }
+}
+
 
 @input-border-focus:             #4E05FF;
