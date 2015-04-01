@@ -1,5 +1,6 @@
 if (!Cookie.get('identity')) {
   Cookie.set('identity', Date.now());
+  Cookie.set('HMAC', 0);
 }
 
 Template.compose.events({
