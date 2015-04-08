@@ -9,8 +9,28 @@
 
 @orange: #F3622A;
 
+@header: #3F522B;
+@button: #DBD2A3;
+@highlight: #E7E3D9;
+
 body {
   background-color: #F4F4F4;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.left {
+  height: 100%;
+  overflow: scroll;
+}
+
+.right {
+  position: relative;
+  img {
+    width: 100%;
+  }
 }
 
 // Header
@@ -19,11 +39,12 @@ body {
   width: 100%;
   padding: 10px 40px;
   border-bottom: solid 1px #E8E8E8;
-  margin-bottom: 40px;
-  background-color: #FAFAFA;
+  background-color: @header;
+  position: fixed;
+  z-index: 100;
 
   h1 {
-    color: #454545;
+    color: white;
     font-family: "cronos-pro-subhead";
     font-weight: 600;
     font-size: 2em;
@@ -31,110 +52,103 @@ body {
     padding: 0px;
     margin: 0px;
   }
+}
 
-  h2 {
-    color: @med-blue;
+.main {
+  padding-top: 90px;
+  
+  .post-time {
+    margin: 5px 0px;
+    padding: 0px;
+    
+    color: @grey;
+    
     font-family: "Arvo";
-
-    font-size: 1.25em;
-
-    padding: 5px;
-    margin: 0px;
-  }
-}
-
-// Compose
-
-.post-time {
-  margin: 5px 0px;
-  padding: 0px;
-
-  color: @grey;
-
-  font-family: "Arvo";
-  font-size: 0.75em;
-}
-
-.post {
-  margin-bottom: 10px;
-  display: inline-block;
-  // border-top: 2px solid @light-blue;
-  border-top: 2px solid #B7D8E4;
-  width: 100%;
-  font-family: "Arvo";
-  
-  .post-content {
-	  background-color: white;
-		padding: 20px;
-    margin: 0px;
-    font-size: 1em;
-    line-height: 2em;
-    color: @grey;
-    border: 1px solid #EFEFEF;
+    font-size: 0.75em;
   }
   
-  .post-footer {
-	  float: right;
-
-    font-size: .8em;
-
-    padding: 6px;
-    color: @med-grey;
-  }
-  
-}
-
-
-.compose {
-  margin-bottom: 40px;
-  display: inline-block;
-  // border-top: 4px solid @orange;
-  width: 100%;
-  font-family: "Arvo";
-
-  textarea {
-    padding: 20px;
-    margin: 0px;
-
-    font-size: 1.25em;
-
-    line-height: 2em;
-
-    color: @grey;
-
-    border-radius: 0px;
-    box-shadow: none;
-    max-width: 100%;
-  }
-
-  textarea:focus {
-    outline:none;
-    box-shadow: none;
-  }
-
-  .form-group {
-    margin: 0px;
-  }
-
-  button {
-    background-color: #B7D8E4;
-    color: white;
-
-    margin: 10px 0;
-    padding: 10px 20px;
-
+  .post {
+    margin-bottom: 10px;
     display: inline-block;
-
-    border-radius: 0px;
-    border: none;
+    // border-top: 2px solid @light-blue;
+    border-top: 2px solid @highlight;
+    width: 100%;
+    font-family: "Arvo";
+    
+    .post-content {
+      background-color: white;
+      padding: 20px;
+      margin: 0px;
+      font-size: 1em;
+      line-height: 2em;
+      color: @grey;
+      border: 1px solid #EFEFEF;
+    }
+    
+    .post-footer {
+      float: right;
+      
+      font-size: .8em;
+      
+      padding: 6px;
+      color: @med-grey;
+    }
+    
   }
-
-  button:hover{
-    background-color: #56C6EF;
-    color: white;
-    box-shadow: none;
+  
+  
+  .compose {
+    margin-bottom: 40px;
+    display: inline-block;
+    // border-top: 4px solid @orange;
+    width: 100%;
+    font-family: "Arvo";
+    
+    textarea {
+      padding: 20px;
+      margin: 0px;
+      
+      font-size: 1.25em;
+      
+      line-height: 2em;
+      
+      color: @grey;
+      
+      border-radius: 0px;
+      box-shadow: none;
+      max-width: 100%;
+    }
+    
+    textarea:focus {
+      outline:none;
+      box-shadow: none;
+    }
+    
+    .form-group {
+      margin: 0px;
+    }
+    
+    button {
+      background-color: @button;
+      color: white;
+      
+      margin: 10px 0;
+      padding: 10px 20px;
+      
+      display: inline-block;
+      
+      border-radius: 0px;
+      border: none;
+    }
+    
+    button:hover{
+      background-color: #D9CB84;
+      color: white;
+      box-shadow: none;
+    }
   }
 }
+
 
 
 @input-border-focus:             #4E05FF;
