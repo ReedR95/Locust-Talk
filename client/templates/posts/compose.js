@@ -6,11 +6,12 @@ Template.compose.events({
   'click button': function (e) {
     var $content = $(e.target).parent().find('textarea');
     
-    post = {
+    var post = {
       date_created: Date.now(),
       author: Cookie.get('identity'),
       content: $content.val()
     }
+    
     if (post.content) {
       Posts.insert(post);
       $content.val('');
